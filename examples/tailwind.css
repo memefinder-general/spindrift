@@ -5,3 +5,24 @@
 @tailwind utilities;
 
 @source inline("border border-dashed");
+
+/* Spindrift styles */
+.spindrift {
+  @apply border border-dashed border-red-500;
+}
+
+/* Apply borders to all descendants of active Spindrift sections */
+.spindrift * {
+  @apply border border-dashed border-red-500;
+}
+
+/* Remove borders within a stop section */
+.spindrift-stop * {
+  @apply border-0;
+}
+
+/* Re-enable borders for nested Spindrift inside a stop section */
+.spindrift-stop .spindrift,
+.spindrift-stop .spindrift * {
+  @apply border border-dashed border-red-500;
+}

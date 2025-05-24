@@ -1,21 +1,36 @@
 {
   "name": "spindrift",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "A React library for visual debugging with CSS borders",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js"
+    },
+    "./plugin": "./src/plugin.js"
+  },
+  "sideEffects": false,
   "scripts": {
     "build": "tsup src/index.tsx --dts --format cjs,esm"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "react",
+    "debugging",
+    "css",
+    "borders",
+    "tailwind"
+  ],
+  "author": "Memefinder General",
+  "license": "MIT",
   "packageManager": "pnpm@10.8.1",
   "peerDependencies": {
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react": ">=18",
+    "react-dom": ">=18"
   },
   "devDependencies": {
     "@types/node": "^22.15.21",
@@ -33,6 +48,7 @@
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.7",
-    "@tailwindcss/vite": "^4.1.7"
+    "@tailwindcss/vite": "^4.1.7",
+    "clsx": "^2.1.1"
   }
 }

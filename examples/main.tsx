@@ -1,74 +1,61 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import "../src/Spindrift";
+import { SpindriftProvider, Div, Span } from "../src";
 import "./tailwind.css";
-
-import { Div, Span } from "../src/index";
 
 function App() {
   return (
-    <div className="p-8 min-h-screen flex flex-col gap-8">
-      <h1 className="text-2xl uppercase tracking-widest">Spindrift Examples</h1>
+    <SpindriftProvider enabled={true} className="spindrift">
+      <div className="p-8 space-y-8">
+        <h1 className="text-3xl font-bold">Spindrift Example</h1>
 
-      <section>
-        <h2 className="text-lg font-semibold mb-4">Basic Usage</h2>
-        <Div>
-          No border for this <code>Div</code>.
-          <Span>
-            Or this <code>Span</code>.
-          </Span>
-        </Div>
-        <Div from>
-          This <code>Div</code> does gets a border and...
-          <Span>
-            This <code>Span</code> within it does as well because it's nested
-            within a spindrift <code>div</code> with <code>from</code> set.
-          </Span>
-        </Div>
-      </section>
-
-      <section>
-        <h2 className="text-lg font-semibold mb-4">Nesting</h2>
-        <Div from className="flex flex-col gap-4">
-          This <code>Div</code> gets a border.
-          <Div className="flex flex-col gap-4 p-4">
-            <p>
-              This is a <code>p</code> tag in a spindrift <code>div</code> that
-              gets a border as it's nested within a spindrift <code>Div</code>{" "}
-              with <code>from</code> set.
-            </p>
-            <div>
-              This is a normal <code>div</code> that also gets a border because
-              it's nested within a spindrift <code>Div</code>.
+        <section>
+          <h2 className="text-xl font-semibold mb-4">Basic Usage</h2>
+          <Div from className="p-4 bg-gray-100">
+            <p>This div and all its children will have borders</p>
+            <div className="mt-2 p-2 bg-white">
+              <span>Regular span with border</span>
             </div>
+            <Span className="block mt-2 p-2 bg-blue-100">
+              Spindrift span with border
+            </Span>
           </Div>
-        </Div>
-      </section>
+        </section>
 
-      <section>
-        <h2 className="text-lg font-semibold mb-4">
-          <code>To</code> and <code>From</code>
-        </h2>
-        <Div from className="flex flex-col gap-4 p-4">
-          <div>
-            This container gets a border because it has <code>from</code> set on
-            its immediate parent
-          </div>
-          <div className="m-4">
-            So does this element
-            <div className="m-4">
-              and this element
-              <Div to className="m-4">
-                But it stops here because this container has <code>to</code>{" "}
-                set.
+        <section>
+          <h2 className="text-xl font-semibold mb-4">Nested Control</h2>
+          <Div from className="p-4 bg-gray-100">
+            <p>This has borders</p>
+            <Div to className="mt-2 p-2 bg-white">
+              <p>This section has no borders</p>
+              <div className="mt-1 p-1 bg-yellow-100">
+                Regular div without border
+              </div>
+              <Div from className="mt-2 p-2 bg-green-100">
+                <p>Borders start again here</p>
+                <span>And continue to children</span>
               </Div>
+            </Div>
+            <div className="mt-2 p-2 bg-purple-100">Back to having borders</div>
+          </Div>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold mb-4">Without Spindrift</h2>
+          <div className="p-4 bg-gray-100">
+            <p>Regular div without any borders</p>
+            <div className="mt-2 p-2 bg-white">
+              <span>Regular span without borders</span>
             </div>
           </div>
-        </Div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </SpindriftProvider>
   );
 }
 
-const root = createRoot(document.getElementById("root")!);
-root.render(<App />);
+const container = document.getElementById("root");
+if (container) {
+  const root = createRoot(container);
+  root.render(<App />);
+}
