@@ -9,7 +9,7 @@ If you're anything like me, CSS is a scourge on the face of the earth and is the
 ## Prerequisites
 
 - React 18+
-- Tailwind CSS
+- Tailwind v4
 
 ## Features
 

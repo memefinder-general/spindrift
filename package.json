@@ -3,20 +3,21 @@
   "version": "0.0.1",
   "description": "A React library for visual debugging with CSS borders",
   "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.esm.js",
-      "require": "./dist/index.js"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
     },
-    "./plugin": "./src/plugin.js"
+    "./css": "./dist/spindrift.css",
+    "./spindrift.css": "./dist/spindrift.css"
   },
   "sideEffects": false,
   "scripts": {
-    "build": "tsup src/index.tsx --dts --format cjs,esm",
+    "build": "tsup src/index.tsx --dts --format esm,cjs --clean && cp src/spindrift.css dist/spindrift.css",
     "examples": "cd examples && pnpm install && pnpx vite"
   },
   "keywords": [
