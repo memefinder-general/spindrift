@@ -37,6 +37,8 @@ yarn add spindrift
 Wrap your app with the `SpindriftProvider`:
 
 ```tsx
+"use client";
+
 import { SpindriftProvider } from "spindrift";
 
 function App() {
@@ -50,15 +52,10 @@ function App() {
 
 ### 2. Add Tailwind Plugin
 
-Add the Spindrift plugin to your `tailwind.config.js`:
+Add the Spindrift plugin to your `globals.css`:
 
-```js
-export default {
-  plugins: [
-    require("spindrift/plugin"),
-    // ... other plugins
-  ],
-};
+```css
+@import "spindrift/spindrift.css";
 ```
 
 ### 3. Use Spindrift Components
@@ -73,6 +70,7 @@ function MyComponent() {
       <Div>This will also have borders</Div>
       <Div to>
         <Span>This won't have borders</Span>
+        <div>This won't have borders either</span>
       </Div>
     </Div>
   );
@@ -154,10 +152,7 @@ import { Div } from "spindrift";
 ```tsx
 import { SpindriftProvider } from "spindrift";
 
-<SpindriftProvider
-  enabled={true}
-  className="border-2 border-blue-500 border-dotted"
->
+<SpindriftProvider enabled={true}>
   <App />
 </SpindriftProvider>;
 ```
@@ -177,21 +172,6 @@ Spindrift is automatically disabled in production builds, but you can control th
 <SpindriftProvider enabled={isDevelopment || isStorybook}>
 ```
 
-## CSS Classes
-
-The default Tailwind plugin adds these styles:
-
-```css
-.spindrift {
-  @apply border border-dashed border-red-500;
-}
-
-.spindrift * {
-  @apply border border-dashed border-red-500;
-}
-```
-
-You can customize the styles by providing your own `className` to the provider.
 
 ## TypeScript
 
