@@ -6,9 +6,9 @@
 
 ### _Heritable borders for React components that just work_
 
-[![pnpm version](https://badge.fury.io/js/spindrift.svg)](https://badge.fury.io/js/spindrift)
-[![pnpm downloads](https://img.shields.io/npm/dm/spindrift.svg)](https://www.npmjs.com/package/spindrift)
-[![license](https://img.shields.io/npm/l/spindrift.svg)](https://github.com/memefinder-general/spindrift/blob/main/LICENSE)
+[![pnpm version](https://badge.fury.io/js/spndrft.svg)](https://badge.fury.io/js/spndrft)
+[![pnpm downloads](https://img.shields.io/npm/dm/spndrft.svg)](https://www.npmjs.com/package/spndrft)
+[![license](https://img.shields.io/npm/l/spndrft.svg)](https://github.com/memefinder-general/spindrift/blob/main/LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-ready-blue.svg)](https://www.typescriptlang.org/)
 
 _A vaguely more tolerable React debugging experience with granular control_
