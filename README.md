@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="misc/image.png" alt="Spindrift logo" width="100" />
+<img src="https://raw.githubusercontent.com/memefinder-general/spindrift/refs/heads/main/misc/image.png" alt="Spindrift logo" width="100" />
 
 # 🌪️ Spindrift
 
