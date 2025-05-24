@@ -29,6 +29,7 @@ const SpindriftBase = forwardRef<any, BaseSpindriftProps & Record<string, any>>(
 
     const currentApplies = config.enabled && (parentDepth > 0 || !!from); // Ensure 'from' is treated as boolean
     const nextDepth = to ? 0 : parentDepth + (from ? 1 : 0);
+    const currentDepth = from ? parentDepth + 1 : parentDepth;
 
     const mergedClassName = clsx(
       className,
@@ -37,7 +38,12 @@ const SpindriftBase = forwardRef<any, BaseSpindriftProps & Record<string, any>>(
     );
 
     return (
-      <Component ref={ref} className={mergedClassName} {...rest}>
+      <Component
+        ref={ref}
+        {...(currentApplies && { "data-spd-depth": currentDepth })}
+        className={mergedClassName}
+        {...rest}
+      >
         {/* Descendants read the updated depth synchronously */}
         <BorderDepthProvider value={nextDepth}>{children}</BorderDepthProvider>
       </Component>
