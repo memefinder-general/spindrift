@@ -1,9 +1,15 @@
 @layer utilities {
   .spindrift,
-  .spindrift * { border: 1px dashed red; }
+  .spindrift * {
+    border: 1px dashed red;
+  }
 
-  .spindrift-stop * { border-width: 0 !important; }
+  .spindrift-stop * {
+    border-width: 0 !important;
+  }
 
   .spindrift-stop .spindrift,
-  .spindrift-stop .spindrift * { border: 1px dashed red !important; }
+  .spindrift-stop .spindrift * {
+    border: 1px dashed red !important;
+  }
 }
