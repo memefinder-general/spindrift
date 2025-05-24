@@ -2,17 +2,16 @@
 
 <img src="misc/image.png" alt="Spindrift logo" width="100" />
 
-
 # 🌪️ Spindrift
 
-### *Heritable borders for React components that just work*
+### _Heritable borders for React components that just work_
 
 [![pnpm version](https://badge.fury.io/js/spindrift.svg)](https://badge.fury.io/js/spindrift)
 [![pnpm downloads](https://img.shields.io/npm/dm/spindrift.svg)](https://www.npmjs.com/package/spindrift)
 [![license](https://img.shields.io/npm/l/spindrift.svg)](https://github.com/memefinder-general/spindrift/blob/main/LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-ready-blue.svg)](https://www.typescriptlang.org/)
 
-*A vaguely more tolerable React debugging experience with granular control*
+_A vaguely more tolerable React debugging experience with granular control_
 
 ---
 
@@ -108,7 +107,7 @@ yarn add spindrift
 ```tsx
 "use client";
 
-import { SpindriftProvider } from "spindrift";
+import { SpindriftProvider } from "spndrft";
 
 function App() {
   return (
@@ -123,13 +122,13 @@ function App() {
 
 ```css
 /* globals.css */
-@import "spindrift/spindrift.css";
+@import "spndrft/css";
 ```
 
 ### 3️⃣ Use Components
 
 ```tsx
-import { Div, Span } from "spindrift";
+import { Div, Span } from "spndrft";
 
 function MyComponent() {
   return (
@@ -153,8 +152,8 @@ The main provider component for global configuration.
 
 ```tsx
 interface SpindriftProviderProps {
-  enabled?: boolean;    // Default: process.env.NODE_ENV !== 'production'
-  className?: string;   // Default: 'spindrift'
+  enabled?: boolean; // Default: process.env.NODE_ENV !== 'production'
+  className?: string; // Default: 'spindrift'
   children: ReactNode;
 }
 ```
@@ -164,9 +163,10 @@ interface SpindriftProviderProps {
 React elements enhanced with Spindrift capabilities.
 
 ```tsx
-interface ComponentProps extends React.ComponentPropsWithoutRef<"div" | "span"> {
-  from?: boolean;  // 🟢 Start applying borders from this element
-  to?: boolean;    // 🔴 Stop applying borders at this element
+interface ComponentProps
+  extends React.ComponentPropsWithoutRef<"div" | "span"> {
+  from?: boolean; // 🟢 Start applying borders from this element
+  to?: boolean; // 🔴 Stop applying borders at this element
 }
 ```
 
@@ -176,6 +176,7 @@ interface ComponentProps extends React.ComponentPropsWithoutRef<"div" | "span"> 
 <summary><strong>🔥 View Interactive Examples</strong></summary>
 
 Run the full example locally:
+
 ```bash
 pnpm examples
 ```
@@ -185,19 +186,19 @@ pnpm examples
 ### 🌟 Basic Usage
 
 ```tsx
-import { Div } from "spindrift";
+import { Div } from "spndrft";
 
 // Apply borders to this div and all children
 <Div from>
   <div>Child 1 📦</div>
   <div>Child 2 📦</div>
-</Div>
+</Div>;
 ```
 
 ### 🎮 Nested Control
 
 ```tsx
-import { Div } from "spindrift";
+import { Div } from "spndrft";
 
 <Div from>
   <div>✅ Has border</div>
@@ -207,7 +208,7 @@ import { Div } from "spindrift";
       <div>✅ Has border again</div>
     </Div>
   </Div>
-</Div>
+</Div>;
 ```
 
 ### 🚀 Production Builds
@@ -216,7 +217,7 @@ import { Div } from "spindrift";
 // ✅ Always enabled
 <SpindriftProvider enabled={true}>
 
-// ❌ Always disabled  
+// ❌ Always disabled
 <SpindriftProvider enabled={false}>
 
 // 🎯 Custom logic
@@ -229,22 +230,12 @@ import { Div } from "spindrift";
 
 ## ⚡ Performance
 
-| Feature | Benefit |
-|---------|---------|
-| **Zero cloning** | Uses CSS selectors instead of recursive React cloning |
-| **Constant time** | O(1) rendering performance regardless of tree depth |
-| **Tree-shakeable** | Only bundles components you actually use |
-| **Production optimized** | Can be completely removed from production builds |
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+| Feature                  | Benefit                                               |
+| ------------------------ | ----------------------------------------------------- |
+| **Zero cloning**         | Uses CSS selectors instead of recursive React cloning |
+| **Constant time**        | O(1) rendering performance regardless of tree depth   |
+| **Tree-shakeable**       | Only bundles components you actually use              |
+| **Production optimized** | Can be completely removed from production builds      |
 
 ## 📄 License
 
@@ -261,6 +252,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **If Spindrift helps you debug faster, consider giving it a ⭐!**
 
-[Report Bug](https://github.com/yourusername/spindrift/issues) • [Request Feature](https://github.com/yourusername/spindrift/issues) • [Discussions](https://github.com/yourusername/spindrift/discussions)
+[Report Bug](https://github.com/memefinder-general/spindrift/issues) • [Request Feature](https://github.com/memefinder-general/spindrift/issues) • [Discussions](https://github.com/memefinder-general/spindrift/discussions)
 
 </div>
