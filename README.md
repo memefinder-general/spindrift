@@ -1,10 +1,10 @@
 # Spindrift
 
-*Note: This is a work in progress and the API is subject to change.*
+_Note: This is a work in progress and the API is subject to change._
 
 Spindrift gives you a `Div` and a `Span` that has heritable borders. You have granular control over the borders by using the `from` and `to`.
 
-If you're anything like me, CSS is a scourge on the face of the earth and is the only thing stopping you from just doing things. 
+If you're anything like me, CSS is a scourge on the face of the earth and is the only thing stopping you from just doing things.
 
 ## Prerequisites
 
@@ -37,11 +37,11 @@ yarn add spindrift
 Wrap your app with the `SpindriftProvider`:
 
 ```tsx
-import { SpindriftProvider } from 'spindrift';
+import { SpindriftProvider } from "spindrift";
 
 function App() {
   return (
-    <SpindriftProvider enabled={process.env.NODE_ENV !== 'production'}>
+    <SpindriftProvider enabled={process.env.NODE_ENV !== "production"}>
       <YourApp />
     </SpindriftProvider>
   );
@@ -55,7 +55,7 @@ Add the Spindrift plugin to your `tailwind.config.js`:
 ```js
 export default {
   plugins: [
-    require('spindrift/plugin'),
+    require("spindrift/plugin"),
     // ... other plugins
   ],
 };
@@ -64,7 +64,7 @@ export default {
 ### 3. Use Spindrift Components
 
 ```tsx
-import { Div, Span } from 'spindrift';
+import { Div, Span } from "spindrift";
 
 function MyComponent() {
   return (
@@ -87,8 +87,8 @@ The main provider component that configures Spindrift globally.
 
 ```tsx
 interface SpindriftProviderProps {
-  enabled?: boolean;        // Default: process.env.NODE_ENV !== 'production'
-  className?: string;       // Default: 'spindrift'
+  enabled?: boolean; // Default: process.env.NODE_ENV !== 'production'
+  className?: string; // Default: 'spindrift'
   children: ReactNode;
 }
 ```
@@ -100,9 +100,9 @@ interface SpindriftProviderProps {
 A `div` element with Spindrift capabilities.
 
 ```tsx
-interface DivProps extends React.ComponentPropsWithoutRef<'div'> {
-  from?: boolean;  // Start applying borders from this element
-  to?: boolean;    // Stop applying borders at this element
+interface DivProps extends React.ComponentPropsWithoutRef<"div"> {
+  from?: boolean; // Start applying borders from this element
+  to?: boolean; // Stop applying borders at this element
 }
 ```
 
@@ -111,30 +111,32 @@ interface DivProps extends React.ComponentPropsWithoutRef<'div'> {
 A `span` element with Spindrift capabilities.
 
 ```tsx
-interface SpanProps extends React.ComponentPropsWithoutRef<'span'> {
-  from?: boolean;  // Start applying borders from this element
-  to?: boolean;    // Stop applying borders at this element
+interface SpanProps extends React.ComponentPropsWithoutRef<"span"> {
+  from?: boolean; // Start applying borders from this element
+  to?: boolean; // Stop applying borders at this element
 }
 ```
 
 ## Usage Patterns
 
+There is a full example in the `examples` folder that you can run by doing `pnpm examples`.
+
 ### Basic Usage
 
 ```tsx
-import { Div } from 'spindrift';
+import { Div } from "spindrift";
 
 // Apply borders to this div and all children
 <Div from>
   <div>Child 1</div>
   <div>Child 2</div>
-</Div>
+</Div>;
 ```
 
 ### Nested Control
 
 ```tsx
-import { Div } from 'spindrift';
+import { Div } from "spindrift";
 
 <Div from>
   <div>Has border</div>
@@ -144,20 +146,20 @@ import { Div } from 'spindrift';
       <div>Has border again</div>
     </Div>
   </Div>
-</Div>
+</Div>;
 ```
 
 ### Custom Styling
 
 ```tsx
-import { SpindriftProvider } from 'spindrift';
+import { SpindriftProvider } from "spindrift";
 
-<SpindriftProvider 
-  enabled={true} 
+<SpindriftProvider
+  enabled={true}
   className="border-2 border-blue-500 border-dotted"
 >
   <App />
-</SpindriftProvider>
+</SpindriftProvider>;
 ```
 
 ### Production Builds
@@ -168,7 +170,7 @@ Spindrift is automatically disabled in production builds, but you can control th
 // Always enabled
 <SpindriftProvider enabled={true}>
 
-// Always disabled  
+// Always disabled
 <SpindriftProvider enabled={false}>
 
 // Custom logic

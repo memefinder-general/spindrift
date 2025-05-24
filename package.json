@@ -16,7 +16,8 @@
   },
   "sideEffects": false,
   "scripts": {
-    "build": "tsup src/index.tsx --dts --format cjs,esm"
+    "build": "tsup src/index.tsx --dts --format cjs,esm",
+    "examples": "cd examples && pnpm install && pnpx vite"
   },
   "keywords": [
     "react",
