@@ -91,13 +91,13 @@ You get a brand-new `Div` and `Span` component with rather underwhelming superpo
 
 ```bash
 # npm
-npm install spindrift
+npm install spndrft
 
 # pnpm
-pnpm add spindrift
+pnpm add spndrft
 
 # yarn
-yarn add spindrift
+yarn add spndrft
 ```
 
 ## 🚀 Quick Start
@@ -247,6 +247,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **If Spindrift helps you debug faster, consider giving it a ⭐!**
 
-[Report Bug](https://github.com/memefinder-general/spindrift/issues) • [Request Feature](https://github.com/memefinder-general/spindrift/issues) • [Discussions](https://github.com/memefinder-general/spindrift/discussions)
+[Report Bug](https://github.com/memefinder-general/spndrft/issues) • [Request Feature](https://github.com/memefinder-general/spndrft/issues) • [Discussions](https://github.com/memefinder-general/spndrft/discussions)
 
 </div>
