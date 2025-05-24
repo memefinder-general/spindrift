@@ -241,11 +241,6 @@ import { Div } from "spndrft";
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
-
-- Inspired by the need for better debugging tools in React
-- Built with ❤️ for the React community
-
 ---
 
 <div align="center">
