@@ -11,8 +11,6 @@
 
 *Transform your React debugging experience with granular border control*
 
-<!-- [🚀 Quick Start](#-quick-start) • [📖 Documentation](#-api-reference) • [🎯 Examples](#-usage-patterns) • [💫 Features](#-features) -->
-
 ---
 
 </div>
