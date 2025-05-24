@@ -6,12 +6,12 @@
 
 [![npm version](https://badge.fury.io/js/spindrift.svg)](https://badge.fury.io/js/spindrift)
 [![npm downloads](https://img.shields.io/npm/dm/spindrift.svg)](https://www.npmjs.com/package/spindrift)
-[![license](https://img.shields.io/npm/l/spindrift.svg)](https://github.com/yourusername/spindrift/blob/main/LICENSE)
+[![license](https://img.shields.io/npm/l/spindrift.svg)](https://github.com/memefinder-general/spindrift/blob/main/LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-ready-blue.svg)](https://www.typescriptlang.org/)
 
 *Transform your React debugging experience with granular border control*
 
-[🚀 Quick Start](#-quick-start) • [📖 Documentation](#-api-reference) • [🎯 Examples](#-usage-patterns) • [💫 Features](#-features)
+<!-- [🚀 Quick Start](#-quick-start) • [📖 Documentation](#-api-reference) • [🎯 Examples](#-usage-patterns) • [💫 Features](#-features) -->
 
 ---
 
