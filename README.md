@@ -1,5 +1,8 @@
 <div align="center">
 
+<img src="misc/image.png" alt="Spindrift logo" width="100" />
+
+
 # 🌪️ Spindrift
 
 ### *Heritable borders for React components that just work*
@@ -9,7 +12,7 @@
 [![license](https://img.shields.io/npm/l/spindrift.svg)](https://github.com/memefinder-general/spindrift/blob/main/LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-ready-blue.svg)](https://www.typescriptlang.org/)
 
-*Transform your React debugging experience with granular border control*
+*A vaguely more tolerable React debugging experience with granular control*
 
 ---
 
