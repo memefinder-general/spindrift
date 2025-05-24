@@ -1,5 +1,5 @@
 {
-  "name": "spindrift",
+  "name": "@memefindergeneral/spindrift",
   "version": "0.0.1",
   "description": "A React library for visual debugging with CSS borders",
   "type": "module",
