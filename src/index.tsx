@@ -1,3 +1,5 @@
+'use server';
+
 export { Div, Span } from "./Spindrift";
 export type { DivProps, SpanProps } from "./types";
 export { SpindriftProvider } from "./context";
