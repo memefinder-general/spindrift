@@ -105,8 +105,6 @@ yarn add spndrft
 ### 1️⃣ Setup Provider
 
 ```tsx
-"use client";
-
 import { SpindriftProvider } from "spndrft";
 
 function App() {
